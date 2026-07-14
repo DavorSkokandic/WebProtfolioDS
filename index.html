@@ -18,7 +18,7 @@
     </header>
     <main>
         <section class="HeroSection">
-            <div class="introHeader">
+            <div class="intro-header">
                 <h1>Hello there... I am Davor...</h1>
                 <p>Software engineer</p>
             </div>
@@ -27,18 +27,19 @@
                 After my professional waterpolo careeer, I am looking forward to start my journey in the world of software engineering and bring my competitive sports spirit and my passion for technology and coding into my next chapter of life.
             </h5>
             <div class ="links-container">
-                <a target="_blank" href="mailto:davor.skokandic46@gmail.com"><i class="fa-solid link-paper-plane fa-paper-plane"></i>Email me</a>
-                 <a target="_blank" href="https://github.com/DavorSkokandic?tab=overview&from=2025-11-01&to=2025-11-19">GitHub</a>
+                <i class="fa-solid link-paper-plane fa-paper-plane"></i>
+                <a target="_blank" href="mailto:davor.skokandic46@gmail.com"></i>Email me</a>
+                <a target="_blank" href="https://github.com/DavorSkokandic?tab=overview&from=2025-11-01&to=2025-11-19">GitHub</a>
             <a target ="_blank" href="www.linkedin.com/in/davor-skokandić-6b34a8201">LinkedIn</a>
             </div>
             <div id="play-game">
-                <button onClick="">Play game???</button>
+                <button onClick="playGame()">Play game???</button>
             </div>
-            <div class ="color-div">
+            <div style ="display: none" class ="color-div">
                 <h4>Pick a color</h4>
-                <p>Great... look what you did!</p>
-                <input type="color" id="color-picker" onchange="" value="#0084ff"/>
-                <button onClick="">Reset button</button>
+                <p style = "display: none">Great... look what you did!</p>
+                <input type="color" id="color-picker" onchange="changeColor()" value="#0084ff"/>
+                <button style ="display:none" onClick="resetColor()">Reset button</button>
             </div>
         </section>
         <section class="SkillsSection">
@@ -80,66 +81,108 @@
                 <div class="project-card">
                     <div>
                         <h4>Portfolio Website</h4>
-                        <div class="card-button-secondary">
-                            <p>HTML</p>
-                        </div>
-                         <div class="card-button-secondary">
-                            <p>CSS</p>
-                        </div>
-                         <div class="card-button-secondary">
-                            <p>JavaScript</p>
+                        <div class="tech-list">
+                            <div class="card-button-secondary">
+                                <p>HTML</p>
+                            </div>
+                            <div class="card-button-secondary">
+                                <p>CSS</p>
+                            </div>
+                            <div class="card-button-secondary">
+                                <p>JavaScript</p>
+                            </div>
                         </div>
                     </div>
                     <p>My personal portfolio website showcasing my skills and projects.</p>
-                    <div class="project-links">
+                   
+                </div>
+                 <div class="project-links">
                         <a target="_blank" href=""><i class="fa-brands fa-github"></i> GitHub Repo</a>
-                    </div>
                 </div>
                 <div class="project-card">
                     <div>
                         <h4>Somnoviz</h4>
-                        <div class="card-button-secondary">
-                            <p>React</p>
-                        </div>
-                         <div class="card-button-secondary">
-                            <p>Typescript</p>
-                        </div>
-                         <div class="card-button-secondary">
-                            <p>TailwindCSS</p>
-                        </div>
-                        <div class="card-button-secondary">
-                            <p>NodeJS</p>
-                        </div>
-                        <div class="card-button-secondary">
-                            <p>Python</p>
+                        <div class="tech-list">
+                            <div class="card-button-secondary">
+                                <p>React</p>
+                            </div>
+                            <div class="card-button-secondary">
+                                <p>Typescript</p>
+                            </div>
+                            <div class="card-button-secondary">
+                                <p>TailwindCSS</p>
+                            </div>
+                            <div class="card-button-secondary">
+                                <p>NodeJS</p>
+                            </div>
+                            <div class="card-button-secondary">
+                                <p>Python</p>
+                            </div>
                         </div>
                     </div>
                     <p>A web application for sleep data analysis and visualization.</p>
-                     <div class="project-links">
-                        <a target ="_blank" href="#">Live</a>
-                        <a target="_blank" href=""><i class="fa-brands fa-github"></i> GitHub Repo</a>
-                    </div>
+                    
                     <div class ="img-div">
                         <img class ="big-img" src="/public/Somnoviz.png" alt="Somnoviz project "/>
                     </div>
                 </div>
+                 <div class="project-links">
+                        <a target ="_blank" href="https://somnoviz.netlify.app/"><i class="fa-solid link-tower-broadcast fa-tower-broadcast"></i> Live</a>
+                        <a target="_blank" href="https://github.com/DavorSkokandic/Somnoviz"><i class="fa-brands fa-github"></i> GitHub Repo</a>
+                </div>
                 <div class="project-card">
                     <div>
-                        <h4>NBA predictions</h4>
-                        <div class="card-button-secondary">
-                            <p>React</p>
-                        </div>
-                         <div class="card-button-secondary">
-                            <p>Typescript</p>
-                        </div>
-                         <div class="card-button-secondary">
-                            <p>TailwindCSS</p>
+                        <h4>The Brogram</h4>
+                        <div class="tech-list">
+                            <div class="card-button-secondary">
+                                <p>React</p>
+                            </div>
+                            <div class="card-button-secondary">
+                                <p>JavaScript</p>
+                            </div>
+                            <div class="card-button-secondary">
+                                <p>CSS</p>
+                            </div>
                         </div>
                     </div>
-                    <p>Web page that allows users to try to predict NBA standigns of the upcoming season.</p>
-                     <div class="project-links">
-                        <a target="_blank" href=""><i class="fa-brands fa-github"></i> GitHub Repo</a>
+                    <p>Web page for people who are going to the gym and like to record and follow progress, as well as having a place to get trainings from.</p>
+                    
+                     <div class ="img-div">
+                        <img class ="big-img" src="/public/The_Brogram.png" alt="The Brogram "/>
                     </div>
+                </div>
+                
+                 <div class="project-links">
+                        <a target ="_blank" href="https://thebrogram.netlify.app/"><i class="fa-solid link-tower-broadcast fa-tower-broadcast"></i> Live</a>
+                        <a target="_blank" href="https://github.com/DavorSkokandic/WorkoutWebsite"><i class="fa-brands fa-github"></i> GitHub repo</a>
+
+                </div>
+            </div>
+              <div class="project-card">
+                    <div>
+                        <h4>Padel&More</h4>
+                        <div class="tech-list">
+                            <div class="card-button-secondary">
+                                <p>HTML</p>
+                            </div>
+                            <div class="card-button-secondary">
+                                <p>JavaScript</p>
+                            </div>
+                            <div class="card-button-secondary">
+                                <p>CSS</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Marketing and booking website for padel centere in Korčula</p>
+                    
+                     <div class ="img-div">
+                        <img class ="big-img" src="/public/Padel&More.png" alt="Padel&More "/>
+                    </div>
+                </div>
+                
+                 <div class="project-links">
+                        <a target ="_blank" href="https://thebrogram.netlify.app/"><i class="fa-solid link-tower-broadcast fa-tower-broadcast"></i> Live</a>
+                        <a target="_blank" href="https://github.com/DavorSkokandic/WorkoutWebsite"><i class="fa-brands fa-github"></i> GitHub repo</a>
 
                 </div>
             </div>
@@ -148,6 +191,40 @@
     <footer>
         <p> By <b>Davor Skokandić</b> ⭐ repo on <a target="_blank" href="https://github.com/DavorSkokandic/WebProtfolioDS">GitHub</a></p>
     </footer>
-    <script></script>
+    <script>
+        const body = document.querySelector("body");
+        const colorPicker = document.getElementById("color-picker");
+        const colorDiv = document.querySelector(".color-div");
+        const hiddenTxt = document.querySelector(".color-div p");
+        const resetBtn =  document.querySelector(".color-div button");
+        const playButton = document.getElementById("play-game");
+
+
+        function playGame(){
+            colorDiv.style.display = "block";
+            playButton.style.display = "none";
+        }
+
+        function changeColor(){
+            const selectedColor = colorPicker.value;
+            body.style.backgroundColor = selectedColor;
+            resetBtn.style.display = "block";
+            hiddenTxt.style.display = "block";
+            colorPicker.style.display = "none";
+        }
+
+        function resetColor(){
+            colorPicker.style.display = "block";
+            body.style.backgroundColor = "white";
+            resetBtn.style.display = "none";
+            hiddenTxt.style.display = "none";
+            colorDiv.style.display = "none";
+            playButton.style.display = "block";
+            colorPicker.value = "#0084ff";
+
+
+        }
+    </script>
+
 </body>
 </html>
